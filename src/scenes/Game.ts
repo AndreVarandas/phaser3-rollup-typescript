@@ -1,5 +1,10 @@
 import Phaser from 'phaser'
 
+/**
+ * The Game scene.
+ *
+ * @see https://photonstorm.github.io/phaser3-docs/Phaser.Scene.html
+ */
 export default class Demo extends Phaser.Scene {
   constructor() {
     super('GameScene')

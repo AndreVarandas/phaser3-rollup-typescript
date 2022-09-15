@@ -8,7 +8,7 @@
 
 This is a [Phaser 3](https://github.com/photonstorm/phaser) starter with [TypeScript](https://www.typescriptlang.org/), [Rollup](https://rollupjs.org) with ⚡️ lightning fast HMR through [Vite](https://vitejs.dev/).
 
-## Note
+## About this starter template
 
 This is a copy or fork of [https://github.com/geocine/phaser3-rollup-typescript](https://github.com/geocine/phaser3-rollup-typescript) - the original Phaser 3 TypeScript starter.
 
@@ -18,8 +18,9 @@ Things I use that were included:
 
 - Husky and lint-staged to run some checks and format code during commits.
 - Commitizen and cz-emoji to build proper semantic commit messages.
-- Prettier as a code formatter.
+- Prettier as a code formatter, with automatic import sort.
 - Added a simple css reset.
+- Aliased '~' for local imports.
 
 ## Available Commands
 

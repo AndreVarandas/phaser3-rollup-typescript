@@ -1,6 +1,11 @@
 import Phaser from 'phaser'
 
-export default {
+/**
+ * The configuration for the Phaser game.
+ *
+ * @see https://photonstorm.github.io/phaser3-docs/Phaser.Types.Core.html#.GameConfig
+ */
+export const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   parent: 'game',
   backgroundColor: '#33A5E7',
