@@ -34,6 +34,7 @@ Things I use that were included:
 | `yarn lint`     | Checks for errors in your code                           |
 | `yarn lint:fix` | Fixes all fixable eslint errors in your code             |
 | `yarn format`   | Formats all the files using prettier                     |
+| `yarn clean`    | Deletes the dist folder                                  |
 
 ## Development
 
