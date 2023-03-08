@@ -1,4 +1,5 @@
 import replace from '@rollup/plugin-replace'
+import terser from '@rollup/plugin-terser'
 import path from 'path'
 import { defineConfig } from 'vite'
 
@@ -21,7 +22,19 @@ export default defineConfig({
           'typeof FEATURE_SOUND': "'true'",
           preventAssignment: true,
         }),
+        terser({
+          compress: {
+            passes: 2,
+          },
+        }),
       ],
+      output: {
+        manualChunks: {
+          phaser: ['phaser'],
+        },
+      },
+      treeshake: true,
+      cache: true,
     },
   },
 })
