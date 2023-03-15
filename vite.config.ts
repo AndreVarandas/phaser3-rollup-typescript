@@ -6,26 +6,31 @@ import path from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  // Configure path aliases
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src'),
     },
   },
   build: {
+    // Configure minification settings
     minify: 'terser',
     chunkSizeWarningLimit: 800,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
     terserOptions: {
+      // Remove comments from output
       format: {
         comments: false,
       },
+      // Mangle properties with a leading underscore
       mangle: {
         properties: {
           regex: /^_/,
         },
       },
+      // Configure compression options
       compress: {
         unsafe: true,
         unsafe_arrows: true,
@@ -41,7 +46,7 @@ export default defineConfig({
     },
     rollupOptions: {
       plugins: [
-        // Toggle the booleans here to enable / disable Phaser 3 features:
+        // Replace feature flags in Phaser 3 with boolean values
         replace({
           'typeof CANVAS_RENDERER': "'true'",
           'typeof WEBGL_RENDERER': "'true'",
@@ -51,17 +56,22 @@ export default defineConfig({
           'typeof FEATURE_SOUND': "'true'",
           preventAssignment: true,
         }),
+        // Resolve external dependencies
         nodeResolve(),
+        // Convert CommonJS modules to ES modules
         commonjs(),
+        // Minify output using Terser
         terser(),
       ],
       output: {
+        // Define manual chunks for better control over output files
         manualChunks: {
           vendor: ['phaser'],
           game: ['src/index.ts'],
         },
         compact: true,
       },
+      // Configure tree-shaking options
       treeshake: {
         moduleSideEffects: 'no-external',
         annotations: true,
