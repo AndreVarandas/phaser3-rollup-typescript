@@ -24,12 +24,8 @@ export default defineConfig({
       format: {
         comments: false,
       },
-      // Mangle properties with a leading underscore
-      mangle: {
-        properties: {
-          regex: /^_/,
-        },
-      },
+      // Mangle
+      mangle: true,
       // Configure compression options
       compress: {
         unsafe: true,
