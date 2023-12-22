@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     // Configure minification settings
     minify: 'terser',
-    chunkSizeWarningLimit: 800,
+    chunkSizeWarningLimit: 1200,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
