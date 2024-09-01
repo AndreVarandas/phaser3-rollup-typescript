@@ -1,3 +1,5 @@
+> Please note that this package is deprecated! You should use **[https://github.com/phaserjs/create-game](https://github.com/phaserjs/create-game)** instead!
+
 # Phaser 3 TypeScript Starter
 
 [![Header](https://i.imgur.com/6lcIxDs.png)](https://github.com/geocine/phaser3-rollup-typescript#readme)
